@@ -13,7 +13,7 @@ def audio_stream(queue: mp.Queue):
     https://pytorch.org/audio/stable/tutorials/streaming_api2_tutorial.html
     """
 
-    streamer = StreamReader(src=":0", format="avfoundation")
+    streamer = StreamReader(src="hw:0", format="alsa")
     streamer.add_basic_audio_stream(frames_per_chunk=8000, sample_rate=16000)
     stream_iterator = streamer.stream(-1, 1)
 
