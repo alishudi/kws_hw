@@ -1,5 +1,12 @@
 # Homework 2 (KWS)
 
+
+report - https://wandb.ai/alishudi/kws/reports/KWS-HW-report--VmlldzoyOTIxNzA4?accessToken=0o83rqqlso8zdyzx2nwfyg7c69r8vmkd6ngxn3zk1lb30e7xibuq6ynmghyxirsg
+wandb logs - https://wandb.ai/alishudi/kws
+all models here in github
+
+
+
 ### Task
 Implement streaming KWS, speed up and compress the model 10 times.
 The goal of the homework is not to implement a fancy architecture and write clean and well-structured code. On the contrary, you will be able to write down all the code in notebooks, but with a lot of comments and graphs :). The goal of the work is to explore various ways to accelerate NNs.

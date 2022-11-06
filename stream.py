@@ -13,7 +13,7 @@ def audio_stream(queue: mp.Queue):
     https://pytorch.org/audio/stable/tutorials/streaming_api2_tutorial.html
     """
 
-    streamer = StreamReader(src="hw:0", format="alsa")
+    streamer = StreamReader(src="audio=device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{C8AAA12A-9E1E-4E63-A334-3C0B799F112F}", format="dshow")
     streamer.add_basic_audio_stream(frames_per_chunk=8000, sample_rate=16000)
     stream_iterator = streamer.stream(-1, 1)
 
@@ -25,7 +25,7 @@ def audio_stream(queue: mp.Queue):
 
 
 if __name__ == "__main__":
-    model = torch.load("kws.pth").eval()
+    model = torch.jit.load("kws.pth").eval()
 
     ctx = mp.get_context("spawn")
     chunk_queue = ctx.Queue()
